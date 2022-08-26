@@ -30,30 +30,63 @@
     background-size: 900px 600px;
 }
 
+.name {
+color: white;
+font-size: 16px;
+font-family: 'Poppins', sans-serif;
+position: absolute;
+text-shadow: 3px 5px 6px black;
+}
+
+.name-hamburg {
+    margin-left: 424px;
+    margin-top: 295px;
+}
+
+.name-kraków {
+    margin-left: 585px;
+    margin-top: 328px;
+}
+
+.name-turin {
+    margin-left: 385px;
+    margin-top: 430px;
+}
+
+.name-madrid {
+    margin-left: 160px;
+    margin-top: 497px;
+}
+
 .ball {
     background-color: rgb(160, 25, 83);
     border-radius: 50%;
     width: 12px;
     height: 12px;
-}
-
-.name-hamburg {
-    color: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     position: absolute;
-    margin-left: 424px;
-    margin-top: 295px;
-    text-shadow: 3px 5px 6px black;
 }
 
 .ball-hamburg {
     margin-top: 300px;
     margin-left: 385px;
-    position: absolute;
 }
 
-.ball-pulse-hamburg-1 {
+.ball-kraków {
+    margin-top: 335px;
+    margin-left: 545px;
+}
+
+.ball-turin {
+    margin-top: 437px;
+    margin-left: 345px;
+}
+
+.ball-madrid {
+    margin-top: 503px;
+    margin-left: 120px;
+}
+
+.ball-pulse {
     border: 1px solid rgb(160, 25, 83);
     position: relative;
     top: 0;
@@ -62,16 +95,25 @@
     right: 0;
     height: 20px;
     width: 20px;
-    margin-top: -5px;
-    margin-left: -5px;
-    z-index: 2;
     border-radius: 50%;
     animation-duration: 1.0s;
-    animation-name: ball-pulse-hamburg-1;
+}
+
+.ball-pulse-1 {
+    margin-top: -5px;
+    margin-left: -5px;
+    animation-name: ball-pulse-1;
     animation-iteration-count: infinite;
 }
 
-@keyframes ball-pulse-hamburg-1 {
+.ball-pulse-2 {
+    margin-top: -22px;
+    margin-left: -5px;
+    animation-name: ball-pulse-2;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ball-pulse-1 {
     from {
         opacity: 1;
         transform: scale(0.9, 0.9);
@@ -83,24 +125,7 @@
     }
 }
 
-.ball-pulse-hamburg-2 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    margin-top: -22px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-hamburg-2;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-hamburg-2 {
+@keyframes ball-pulse-2 {
     from {
         opacity: 1;
         transform: scale(0.9, 0.9);
@@ -110,6 +135,14 @@
         opacity: 0;
         transform: scale(2.3, 2.3);
     }
+}
+
+.ball:hover .ball-pulse-1 {
+    animation-play-state: paused;
+}
+
+.ball:hover .ball-pulse-2 {
+    animation-play-state: paused;
 }
 
 .card {
@@ -139,7 +172,7 @@
     margin-left: -87px;
 }
 
-.card-hamburg .headline {
+.card .headline {
     color: white;
     text-align: left;
     font-size: 14px;
@@ -148,7 +181,7 @@
     font-weight: bold;
 }
 
-.card-hamburg .description{
+.card .description{
     color: white;
     text-align: left;
     font-size: 14px;
@@ -173,333 +206,7 @@
     background-color: gray;
 }
 
-.ball-hamburg:hover .ball-pulse-hamburg-1 {
-    animation-play-state: paused;
-}
-
-.ball-hamburg:hover .ball-pulse-hamburg-2 {
-    animation-play-state: paused;
-}
-
-.ball-hamburg:hover .card-hamburg {
-    opacity: 1;
-    visibility: visible;
-}
-
-.name-kraków {
-    color: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    margin-left: 585px;
-    margin-top: 328px;
-    text-shadow: 3px 5px 6px black;
-}
-
-.ball-kraków {
-    margin-top: 335px;
-    margin-left: 545px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-}
-
-.ball-pulse-kraków-1 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    z-index: 2;
-    margin-top: -5px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-kraków-1;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-kraków-1 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(1.3, 1.3);
-    }
-}
-
-.ball-pulse-kraków-2 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    margin-top: -22px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-kraków-2;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-kraków-2 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(2.3, 2.3);
-    }
-}
-
-.card-kraków .headline {
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-top: -30px;
-    font-weight: bold;
-}
-
-.card-kraków .description{
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    font-style: italic;
-}
-
-.ball-kraków:hover .ball-pulse-kraków-1 {
-    animation-play-state: paused;
-}
-
-.ball-kraków:hover .ball-pulse-kraków-2 {
-    animation-play-state: paused;
-}
-
-.ball-kraków:hover .card-kraków {
-    opacity: 1;
-    visibility: visible;
-}
-
-.name-turin {
-    color: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    margin-left: 385px;
-    margin-top: 430px;
-    text-shadow: 3px 5px 6px black;
-}
-
-.ball-turin {
-    margin-top: 437px;
-    margin-left: 345px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-}
-
-.ball-pulse-turin-1 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    z-index: 2;
-    margin-top: -5px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-turin-1;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-turin-1 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(1.3, 1.3);
-    }
-}
-
-.ball-pulse-turin-2 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    margin-top: -22px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-turin-2;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-turin-2 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(2.3, 2.3);
-    }
-}
-
-.card-turin .headline {
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-top: -30px;
-    font-weight: bold;
-}
-
-.card-turin .description{
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    font-style: italic;
-}
-
-.ball-turin:hover .ball-pulse-turin-1 {
-    animation-play-state: paused;
-}
-
-.ball-turin:hover .ball-pulse-turin-2 {
-    animation-play-state: paused;
-}
-
-.ball-turin:hover .card-turin {
-    opacity: 1;
-    visibility: visible;
-}
-
-.name-madrid {
-    color: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    margin-left: 160px;
-    margin-top: 497px;
-    text-shadow: 3px 5px 6px black;
-}
-
-.ball-madrid {
-    margin-top: 503px;
-    margin-left: 120px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-}
-
-.ball-pulse-madrid-1 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    z-index: 2;
-    margin-top: -5px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-madrid-1;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-madrid-1 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(1.3, 1.3);
-    }
-}
-
-.ball-pulse-madrid-2 {
-    border: 1px solid rgb(160, 25, 83);
-    position: relative;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    margin-top: -22px;
-    margin-left: -5px;
-    border-radius: 50%;
-    animation-duration: 1.0s;
-    animation-name: ball-pulse-madrid-2;
-    animation-iteration-count: infinite;
-}
-
-@keyframes ball-pulse-madrid-2 {
-    from {
-        opacity: 1;
-        transform: scale(0.9, 0.9);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(2.3, 2.3);
-    }
-}
-
-.card-madrid .headline {
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-top: -30px;
-    font-weight: bold;
-}
-
-.card-madrid .description{
-    color: white;
-    text-align: left;
-    font-size: 14px;
-    margin-left: 10px;
-    font-style: italic;
-}
-
-.ball-madrid:hover .ball-pulse-madrid-1 {
-    animation-play-state: paused;
-}
-
-.ball-madrid:hover .ball-pulse-madrid-2 {
-    animation-play-state: paused;
-}
-
-.ball-madrid:hover .card-madrid {
+.ball:hover .card {
     opacity: 1;
     visibility: visible;
 }
